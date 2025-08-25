@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
           title: const Text('Flutter Location Picker'),
         ),
         body: FlutterLocationPicker(
+          userAgent: 'com.example.app',
           initZoom: 11,
           minZoomLevel: 5,
           maxZoomLevel: 16,

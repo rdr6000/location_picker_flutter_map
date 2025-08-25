@@ -4,7 +4,6 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:flutter_map_cancellable_tile_provider/flutter_map_cancellable_tile_provider.dart';
 import 'package:flutter_map_location_marker/flutter_map_location_marker.dart'
     as marker;
 import 'package:geolocator/geolocator.dart';
@@ -786,7 +785,7 @@ class _FlutterLocationPickerState extends State<FlutterLocationPicker>
             urlTemplate: widget.urlTemplate,
             subdomains: const ['a', 'b', 'c'],
             userAgentPackageName: widget.userAgent,
-            tileProvider: CancellableNetworkTileProvider(),
+            tileProvider: NetworkTileProvider(),
           ),
           if (widget.showCurrentLocationPointer) _buildCurrentLocation(),
           ...widget.mapLayers,
